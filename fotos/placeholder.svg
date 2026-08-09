@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3f6f5"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="mar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e9594"/>
+      <stop offset="100%" stop-color="#0a6f6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#cielo)"/>
+  <rect y="380" width="800" height="220" fill="url(#mar)"/>
+  <rect x="150" y="300" width="220" height="110" fill="#ffffff" stroke="#1b1f1f" stroke-width="3"/>
+  <polygon points="140,300 260,220 380,300" fill="#0e9594" stroke="#1b1f1f" stroke-width="3"/>
+  <rect x="230" y="340" width="60" height="70" fill="#0a6f6e"/>
+  <circle cx="620" cy="140" r="55" fill="#ffffff" stroke="#0e9594" stroke-width="4"/>
+  <text x="400" y="470" font-family="Verdana, Arial, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">
+    Foto de ejemplo — Promotora SC1, S.A.
+  </text>
+</svg>

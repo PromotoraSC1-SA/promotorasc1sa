@@ -1,0 +1,433 @@
+/* ==========================================================================
+   Promotora SC1, S.A. - Hoja de estilos principal
+   Paleta: turquesa, blanco y gris/negro
+   ========================================================================== */
+
+:root {
+  --turquesa: #0e9594;
+  --turquesa-oscuro: #0a6f6e;
+  --turquesa-claro: #e3f6f5;
+  --negro: #1b1f1f;
+  --gris: #4a5254;
+  --gris-claro: #eef2f2;
+  --blanco: #ffffff;
+  --sombra: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --radio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: var(--negro);
+  background-color: var(--blanco);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--turquesa-oscuro);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Cabecera / navegación ---------- */
+
+.site-header {
+  background-color: var(--negro);
+  color: var(--blanco);
+  border-bottom: 4px solid var(--turquesa);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blanco);
+  letter-spacing: 0.02em;
+}
+
+.brand span {
+  color: var(--turquesa);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--blanco);
+  font-weight: 600;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--turquesa);
+  text-decoration: none;
+  border-bottom-color: var(--turquesa);
+}
+
+.main-nav a[aria-current="page"] {
+  color: var(--turquesa);
+  border-bottom-color: var(--turquesa);
+}
+
+/* ---------- Contenido principal ---------- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  min-height: 55vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--turquesa) 0%, var(--turquesa-oscuro) 100%);
+  color: var(--blanco);
+  border-radius: var(--radio);
+  padding: 3rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: 2.1rem;
+}
+
+.hero p {
+  max-width: 65ch;
+  font-size: 1.05rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--negro);
+}
+
+h2 {
+  border-left: 5px solid var(--turquesa);
+  padding-left: 0.7rem;
+  margin-top: 2.5rem;
+}
+
+.section-intro {
+  color: var(--gris);
+  max-width: 75ch;
+}
+
+/* ---------- Tarjetas de enlace (home) ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--gris-claro);
+  border: 1px solid #dde5e5;
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--turquesa-oscuro);
+}
+
+.card a.card-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-weight: 700;
+  color: var(--turquesa-oscuro);
+}
+
+/* ---------- Tabla / lista de datos identificativos ---------- */
+
+.datos-legales {
+  background-color: var(--gris-claro);
+  border-radius: var(--radio);
+  padding: 1.5rem 2rem;
+  border: 1px solid #dde5e5;
+}
+
+.datos-legales dl {
+  display: grid;
+  grid-template-columns: minmax(160px, 260px) 1fr;
+  gap: 0.6rem 1.2rem;
+  margin: 0;
+}
+
+.datos-legales dt {
+  font-weight: 700;
+  color: var(--turquesa-oscuro);
+}
+
+.datos-legales dd {
+  margin: 0;
+  color: var(--negro);
+}
+
+@media (max-width: 600px) {
+  .datos-legales dl {
+    grid-template-columns: 1fr;
+  }
+  .datos-legales dt {
+    margin-top: 0.6rem;
+  }
+}
+
+/* ---------- Galería de fotos ---------- */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.galeria figure {
+  margin: 0;
+  background-color: var(--gris-claro);
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 1px solid #dde5e5;
+  box-shadow: var(--sombra);
+}
+
+.galeria figure img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.galeria figcaption {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+
+.aviso-vacio {
+  padding: 1rem 1.2rem;
+  background-color: var(--turquesa-claro);
+  border-left: 4px solid var(--turquesa);
+  border-radius: 6px;
+  color: var(--negro);
+}
+
+/* ---------- Tablón de anuncios ---------- */
+
+.lista-juntas {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lista-juntas li {
+  background-color: var(--gris-claro);
+  border: 1px solid #dde5e5;
+  border-left: 5px solid var(--turquesa);
+  border-radius: var(--radio);
+  padding: 1.1rem 1.4rem;
+}
+
+.lista-juntas h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.lista-juntas .meta {
+  color: var(--gris);
+  font-size: 0.92rem;
+  margin: 0 0 0.5rem;
+}
+
+.lista-juntas a.enlace-junta {
+  font-weight: 700;
+}
+
+.etiqueta {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+}
+
+.etiqueta.proxima {
+  background-color: var(--turquesa-claro);
+  color: var(--turquesa-oscuro);
+}
+
+.etiqueta.celebrada {
+  background-color: #e3e3e3;
+  color: var(--gris);
+}
+
+/* ---------- Páginas de junta individual (dentro de /juntas) ---------- */
+
+.junta-cabecera {
+  background-color: var(--turquesa-claro);
+  border-radius: var(--radio);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.junta-cabecera dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1rem;
+  margin: 0.8rem 0 0;
+}
+
+.junta-cabecera dt {
+  font-weight: 700;
+  color: var(--turquesa-oscuro);
+}
+
+.junta-cabecera dd {
+  margin: 0;
+}
+
+.orden-dia {
+  padding-left: 1.3rem;
+}
+
+.orden-dia li {
+  margin-bottom: 0.5rem;
+}
+
+.documentos-junta ul {
+  padding-left: 1.3rem;
+}
+
+.acta-descarga {
+  margin-top: 2.5rem;
+  padding: 1.3rem 1.6rem;
+  background-color: var(--gris-claro);
+  border: 1px dashed var(--turquesa);
+  border-radius: var(--radio);
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--turquesa);
+  color: var(--blanco);
+  font-weight: 700;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin-top: 0.6rem;
+}
+
+.boton:hover,
+.boton:focus {
+  background-color: var(--turquesa-oscuro);
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+.volver {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Pie de página ---------- */
+
+.site-footer {
+  background-color: var(--negro);
+  color: #d8dede;
+  border-top: 4px solid var(--turquesa);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.site-footer h4 {
+  color: var(--turquesa);
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.site-footer p,
+.site-footer li {
+  font-size: 0.92rem;
+  color: #c8d0d0;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer a {
+  color: #d8dede;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--turquesa);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.82rem;
+  color: #9aa4a4;
+  border-top: 1px solid #333;
+}
