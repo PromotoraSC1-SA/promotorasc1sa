@@ -11,7 +11,11 @@
  */
 const FOTOS = [
   {
-    archivo: "placeholder.svg",
-    descripcion: "Fotografía de ejemplo — villa vacacional en Lanzarote"
+    archivo: "villa15.png",
+    descripcion: "Promotora SC1, S.A. — Villa 15"
+  },
+{
+    archivo: "villa15-2.png",
+    descripcion: "Promotora SC1, S.A. — Villa 15"
   }
 ];

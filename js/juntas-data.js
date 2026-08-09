@@ -22,12 +22,12 @@
 const JUNTAS = [
   {
     titulo: "Junta General Ordinaria de Accionistas 2026",
-    fechaISO: "2026-06-15",
-    fecha: "15 de junio de 2026",
-    fechaPublicacionISO: "2026-05-10",
-    fechaPublicacion: "10 de mayo de 2026",
-    lugar: "Calle la Calera 10, Casa 1, 35580 Playa Blanca, Yaiza (Lanzarote)",
-    enlace: "juntas/2026-06-15-junta-general-ordinaria.html",
+    fechaISO: "2026-07-29",
+    fecha: "29 de julio de 2026",
+    fechaPublicacionISO: "2026-06-25",
+    fechaPublicacion: "25 de junio de 2026",
+    lugar: "Notaria Playa Blanca, La Peña 5, 35580 Yaiza (Lanzarote), Las Palmas, España",
+    enlace: "juntas/2026-07-29-junta-general-ordinaria.html",
     estado: "celebrada"
   }
 ];
