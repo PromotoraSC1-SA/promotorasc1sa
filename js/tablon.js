@@ -1,6 +1,6 @@
 /*
- * Construye el listado del Tablón de Anuncios Corporativo a partir del
- * listado definido en juntas-data.js (variable global JUNTAS).
+ * Construye el listado de la sección Junta General de Accionistas a
+ * partir del listado definido en juntas-data.js (variable global JUNTAS).
  */
 (function () {
   "use strict";

@@ -1,5 +1,6 @@
 /*
- * Listado del Tablón de Anuncios Corporativo (Juntas de socios/accionistas).
+ * Listado de la sección Junta General de Accionistas (convocatorias de
+ * juntas de socios/accionistas).
  *
  * Para publicar una nueva convocatoria:
  *   1. Crea la página HTML de la junta dentro de la carpeta /juntas
@@ -15,8 +16,8 @@
  *      tablón calcula y muestra automáticamente ese plazo.
  *
  * No es necesario tocar ningún otro archivo: la página
- * tablon-anuncios.html carga este listado automáticamente y lo muestra
- * ordenado de la convocatoria más reciente a la más antigua.
+ * junta-general-accionistas.html carga este listado automáticamente y
+ * lo muestra ordenado de la convocatoria más reciente a la más antigua.
  */
 const JUNTAS = [
   {
