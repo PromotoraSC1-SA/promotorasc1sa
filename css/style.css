@@ -258,6 +258,55 @@ h2 {
 
 /* ---------- Tablón de anuncios ---------- */
 
+.nota-legal {
+  background-color: var(--turquesa-claro);
+  border: 1px solid var(--turquesa);
+  border-radius: var(--radio);
+  padding: 1.3rem 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.nota-legal h2 {
+  margin-top: 0;
+  border: none;
+  padding-left: 0;
+  font-size: 1.15rem;
+}
+
+.nota-legal ul {
+  padding-left: 1.3rem;
+  margin-bottom: 0;
+}
+
+.nota-legal li {
+  margin-bottom: 0.5rem;
+}
+
+.fecha-publicacion {
+  font-size: 0.85rem;
+  color: var(--gris);
+  margin: 0 0 0.4rem;
+}
+
+.cumplimiento {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+}
+
+.cumplimiento.ok {
+  background-color: #dff3ea;
+  color: #17794e;
+}
+
+.cumplimiento.aviso {
+  background-color: #fdeee0;
+  color: #a15c00;
+}
+
 .lista-juntas {
   list-style: none;
   padding: 0;

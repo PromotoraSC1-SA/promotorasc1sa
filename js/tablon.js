@@ -22,15 +22,47 @@
     meta.className = "meta";
     meta.textContent = junta.fecha + " — " + junta.lugar;
 
+    item.appendChild(titulo);
+    item.appendChild(meta);
+
+    if (junta.fechaPublicacionISO) {
+      item.appendChild(crearAvisoAntelacion(junta));
+    }
+
     var enlace = document.createElement("a");
     enlace.className = "enlace-junta";
     enlace.href = junta.enlace;
     enlace.textContent = "Ver convocatoria completa \u2192";
 
-    item.appendChild(titulo);
-    item.appendChild(meta);
     item.appendChild(enlace);
     return item;
+  }
+
+  function crearAvisoAntelacion(junta) {
+    var publicacion = document.createElement("p");
+    publicacion.className = "fecha-publicacion";
+
+    var msPorDia = 1000 * 60 * 60 * 24;
+    var dias = Math.round(
+      (new Date(junta.fechaISO) - new Date(junta.fechaPublicacionISO)) /
+        msPorDia
+    );
+
+    var badge = document.createElement("span");
+    badge.className = "cumplimiento " + (dias >= 30 ? "ok" : "aviso");
+    badge.textContent =
+      dias >= 30
+        ? "Antelación conforme (art. 173.1 LSC)"
+        : "Revisar antelación (art. 173.1 LSC)";
+
+    publicacion.textContent =
+      "Convocatoria publicada el " +
+      (junta.fechaPublicacion || junta.fechaPublicacionISO) +
+      " (" +
+      dias +
+      " días de antelación) ";
+    publicacion.appendChild(badge);
+    return publicacion;
   }
 
   function iniciar() {
